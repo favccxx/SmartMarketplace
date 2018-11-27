@@ -1,5 +1,5 @@
-<p align="center">
-  <img width="320" src="https://wpimg.wallstcn.com/ecc53a42-d79b-42e2-8852-5126b810a4c8.svg">
+<p align="center" style="font-weight:bold;font-size:18px;">
+  易 商 城
 </p>
 
 <p align="center">
@@ -17,10 +17,10 @@
 
 ## 简介
 
-[easy-marketplace]() 是一个极简的商城管理系统，它基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin),采用 [vue](https://github.com/vuejs/vue) 和 [element](https://github.com/ElemeFE/element)。它使用了最新的前端技术栈，内置了 i18 国际化解决方案，支持动态路由，权限管理，可以基于它快速开发小型的商城管理系统。
+[易商城](https://github.com/favccxx/SmartMarketplace) 是一个极简的商城管理系统，它基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)， 采用 [vue](https://github.com/vuejs/vue) 和 [element](https://github.com/ElemeFE/element)。它使用了最新的前端技术栈，内置了 i18 国际化解决方案，支持动态路由，权限管理，可以基于它快速开发小型的商城管理系统。
 
 
-**本项目的初始目的是采用VUE2搭建一套独立的前后端分离系统。项目以简易商城为背景，搭建一个简单的商城解决方案。
+本项目的初始目的是采用VUE2搭建一套独立的前后端分离系统。项目以简易商城为背景，搭建一个简单的商城解决方案。
 
 ## 主要功能
 
@@ -56,9 +56,10 @@
 
 - 日志管理
   - 审计日志
+```
 
-  ## 开发
-
+## 开发
+  
   ```bash
   # 克隆项目
   git clone
@@ -72,7 +73,7 @@
 
   浏览器访问 http://localhost:9527
 
-  ## 发布
+## 发布
 
   ```bash
   # 构建测试环境
@@ -88,4 +89,4 @@
 
 ## License
 
-[MIT]
+[MIT](https://github.com/favccxx/SmartMarketplace/blob/master/MarketplaceWeb/LICENSE)
