@@ -48,7 +48,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/iorder")
-@Api(tags = "3. 前端订单管理接口")
+@Api(tags = "2.1 前端订单管理接口")
 public class IOrderController {
 
 	Logger logger = LoggerFactory.getLogger(getClass());

@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,8 +37,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/image")
-@Api(tags = "8. 图片管理接口")
+@RequestMapping("/api/mgr/image")
+@Api(tags = "1.4 图片管理接口")
 public class ImageController {
 
 	Logger logger = LoggerFactory.getLogger(getClass());

@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -36,7 +36,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/vip")
-@Api(tags="5. 会员管理接口" )
+@Api(tags="1.10 会员管理接口" )
 public class VipController {
 	
 	Logger logger = LoggerFactory.getLogger(getClass());

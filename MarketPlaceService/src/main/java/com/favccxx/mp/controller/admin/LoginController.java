@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
@@ -30,8 +30,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/login")
-@Api(value = "登录登出管理接口", tags = "1. 登录接口")
+@RequestMapping("/api/mgr/login")
+@Api(value = "登录登出管理接口", tags = "1.0 登录接口")
 public class LoginController {
 
 	Logger logger = LoggerFactory.getLogger(getClass());

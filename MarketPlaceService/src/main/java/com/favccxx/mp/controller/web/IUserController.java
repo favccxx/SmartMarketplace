@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/user")
-@Api(tags="4. 用户管理接口" )
+@Api(tags="2.2. 用户管理接口" )
 public class IUserController {
 	
 	@Autowired

@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.util.Date;
 import java.util.List;
@@ -36,8 +36,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/category")
-@Api(tags = "6. 产品类别管理接口")
+@RequestMapping("/api/mgr/category")
+@Api(tags = "1.2 产品类别管理接口")
 public class ProductCategoryController {
 
 	@Autowired

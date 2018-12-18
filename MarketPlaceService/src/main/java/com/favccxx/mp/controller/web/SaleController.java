@@ -30,7 +30,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api/sale")
-@Api(tags="2. 销售产品管理接口" )
+@Api(tags="2.3 销售产品管理接口" )
 public class SaleController {
 	
 Logger logger = LoggerFactory.getLogger(getClass());

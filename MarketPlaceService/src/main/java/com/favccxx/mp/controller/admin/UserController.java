@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +30,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/user")
-@Api(value = "用户管理接口", tags="9. 用户管理接口" )
+@RequestMapping("/api/mgr/user")
+@Api(value = "用户管理接口", tags="1.8 用户管理接口" )
 public class UserController {
 
 	@Autowired

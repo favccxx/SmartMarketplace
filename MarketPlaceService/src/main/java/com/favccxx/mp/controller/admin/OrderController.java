@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -45,8 +45,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/order")
-@Api(tags="8. 订单管理接口" )
+@RequestMapping("/api/mgr/order")
+@Api(tags="1.5 订单管理接口" )
 public class OrderController {
 	
 	Logger logger = LoggerFactory.getLogger(getClass());

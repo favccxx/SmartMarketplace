@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.favccxx.mp.constants.SysConstants;
-import com.favccxx.mp.entity.SmartRole;
-import com.favccxx.mp.service.RoleService;
+import com.favccxx.mp.entity.SmartFaq;
+import com.favccxx.mp.service.FaqService;
 import com.favccxx.mp.utils.SortUtil;
 import com.favccxx.mp.utils.result.RestResult;
 
@@ -23,39 +23,41 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/role")
-@Api(tags="9. 角色管理接口" )
-public class RoleController {
-	
-	@Autowired
-	RoleService roleService;
+@RequestMapping("/api/mgr/faq")
+@Api(tags="1.7 问答管理接口" )
+public class FaqController {
 
+	@Autowired
+	FaqService faqService;
+	
 	@GetMapping("/list")
 	@ApiResponses(value = {
-            @ApiResponse(code = 200, message = "操作成功", response = SmartRole.class) })
-    @ApiOperation(httpMethod = "GET", value = "分页查询用户信息")
-	public RestResult<Page<SmartRole>> list(			
-			@RequestParam(value = "roleCode", required=false) String roleCode,
-			@RequestParam(value = "roleName", required=false) String roleName,
+            @ApiResponse(code = 200, message = "操作成功", response = SmartFaq.class) })
+    @ApiOperation(httpMethod = "GET", value = "分页查询评论信息")
+	public RestResult<Page<SmartFaq>> list(			
+			@RequestParam(value = "content", required=false) String content,
+			@RequestParam(value = "productId", required=false) String productId,
 			@RequestParam(value="sort", defaultValue="+id") String sort,
 			@RequestParam(value = "page", defaultValue="1")  int page,
 			@RequestParam(value = "limit", defaultValue=SysConstants.PAGE_SIZE)  int limit) {
 		
-		Page<SmartRole> pageData = null;
-		SmartRole role = new SmartRole();
+		Page<SmartFaq> pageData = null;
+		SmartFaq faq = new SmartFaq();
+
 		
-		if(StringUtils.isNotBlank(roleCode)) {
-			role.setRoleCode(roleCode);
+		if(StringUtils.isNotBlank(content)) {
+			faq.setContent(content);
 		}
 		
-		if(StringUtils.isNoneBlank(roleName)) {
-			role.setRoleName(roleName);
+		if(StringUtils.isNoneBlank(productId)) {
+			faq.setProductId(Long.valueOf(productId));
 		}
 
 		Sort mySort = SortUtil.getSort(sort);
 		Pageable pageable = PageRequest.of(page - 1, limit, mySort);
-		pageData = roleService.pageQuery(role, pageable);
+		pageData = faqService.pageQuery(faq, pageable);
 		
 		return RestResult.sucess(pageData);	
 	}
+	
 }

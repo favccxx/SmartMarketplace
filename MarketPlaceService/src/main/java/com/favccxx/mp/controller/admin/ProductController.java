@@ -1,4 +1,4 @@
-package com.favccxx.mp.controller;
+package com.favccxx.mp.controller.admin;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -37,8 +37,8 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/api/product")
-@Api(tags="7. 产品管理接口" )
+@RequestMapping("/api/mgr/product")
+@Api(tags="1.3 产品管理接口" )
 public class ProductController {
 	
 	Logger logger = LoggerFactory.getLogger(getClass());

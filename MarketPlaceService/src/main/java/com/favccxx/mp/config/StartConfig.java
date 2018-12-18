@@ -10,17 +10,17 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.favccxx.mp.constants.SysConstants;
-import com.favccxx.mp.entity.SmartMall;
 import com.favccxx.mp.entity.SmartRole;
-import com.favccxx.mp.repository.MallRepository;
+import com.favccxx.mp.entity.SmartShop;
 import com.favccxx.mp.repository.RoleRepository;
+import com.favccxx.mp.repository.ShopRepository;
 
 @Component
 @Order(1)
 public class StartConfig implements ApplicationRunner {
 
 	@Autowired
-	MallRepository clubRepository;
+	ShopRepository clubRepository;
 	@Autowired
 	RoleRepository roleRepository;
 
@@ -34,15 +34,15 @@ public class StartConfig implements ApplicationRunner {
 	 * 初始化默认的俱乐部信息
 	 */
 	private void initClub() {
-		SmartMall club = clubRepository.findByMallCode(SysConstants.DEFAULT_CLUB);
+		SmartShop club = clubRepository.findByShopCode(SysConstants.DEFAULT_CLUB);
 		if (club == null) {
-			club = new SmartMall();
-			club.setMallCode(SysConstants.DEFAULT_CLUB);
-			club.setMallName("易商城");
+			club = new SmartShop();
+			club.setShopCode(SysConstants.DEFAULT_CLUB);
+			club.setShopName("易商城");
 			club.setCharger("陈先生");
 			club.setChargeTel("1871xxxxxxx");
 			club.setDescription("<p><strong>易商城</strong>是陈先生基于Panjiachen的VUE-ELEMENT-ADMIN开发的一套简易WEB商城项目。前端基于VUE2+Element，支持国际化，动态路由和权限验证，后台采用SpringBoot微服务+Shiro进行身份认证与鉴权，同时又集成了Swagger方便进行接口测试。</p>");
-			club.setCreateDate(new Date());
+			club.setCreateTime(new Date());
 			club.setCreateUserName("admin");
 			clubRepository.save(club);
 		}

@@ -14,13 +14,14 @@ import javax.persistence.Lob;
 
 /**
  * 商城
+ * 
  * @author favccxx
  *
  */
 
 @Entity
-public class SmartMall implements Serializable{
-	
+public class SmartShop implements Serializable {
+
 	/**
 	 * 
 	 */
@@ -29,57 +30,60 @@ public class SmartMall implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	/**
 	 * 俱乐部代码
 	 */
-	private String mallCode;
-	
+	private String shopCode;
+
 	/**
 	 * 俱乐部名称
 	 */
-	private String mallName;
-	
+	private String shopName;
+
 	/**
-	 * 俱乐部类型
-	 * 直营店
-	 * 加盟店
+	 * 俱乐部类型 直营店 加盟店
 	 */
-	private String mallType;
-	
+	private String shopType;
+
+	/**
+	 * 店铺状态
+	 */
+	private String status;
+
 	/**
 	 * 备注
 	 */
-	@Lob @Basic(fetch = FetchType.LAZY) 
+	@Lob
+	@Basic(fetch = FetchType.LAZY)
 	@Column(columnDefinition = "text")
 	private String description;
-	
-	
+
 	/**
 	 * 负责人
 	 */
 	private String charger;
-	
+
 	/**
 	 * 负责人电话
 	 */
 	private String chargeTel;
-	
+
 	/**
 	 * 创建人
 	 */
 	private String createUserName;
-	
+
 	/**
 	 * 创建时间
 	 */
-	private Date createDate;
-	
+	private Date createTime;
+
 	/**
 	 * 更新人
 	 */
 	private String updateUserName;
-	
+
 	/**
 	 * 更新时间
 	 */
@@ -93,28 +97,36 @@ public class SmartMall implements Serializable{
 		this.id = id;
 	}
 
-	public String getMallCode() {
-		return mallCode;
+	public String getShopCode() {
+		return shopCode;
 	}
 
-	public void setMallCode(String mallCode) {
-		this.mallCode = mallCode;
+	public void setShopCode(String shopCode) {
+		this.shopCode = shopCode;
 	}
 
-	public String getMallName() {
-		return mallName;
+	public String getShopName() {
+		return shopName;
 	}
 
-	public void setMallName(String mallName) {
-		this.mallName = mallName;
+	public void setShopName(String shopName) {
+		this.shopName = shopName;
 	}
 
-	public String getMallType() {
-		return mallType;
+	public String getShopType() {
+		return shopType;
 	}
 
-	public void setMallType(String mallType) {
-		this.mallType = mallType;
+	public void setShopType(String shopType) {
+		this.shopType = shopType;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public String getDescription() {
@@ -149,12 +161,12 @@ public class SmartMall implements Serializable{
 		this.createUserName = createUserName;
 	}
 
-	public Date getCreateDate() {
-		return createDate;
+	public Date getCreateTime() {
+		return createTime;
 	}
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 	public String getUpdateUserName() {
@@ -172,11 +184,5 @@ public class SmartMall implements Serializable{
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
-	
-	
-
-	
-	
-	
 
 }
