@@ -40,10 +40,6 @@ public class SmartReview implements Serializable {
 	 */
 	private int score;
 	
-	/**
-	 * 回复某个评论Id
-	 */
-	private long replyId;
 	
 	/**
 	 * 评论用户Id
@@ -53,13 +49,29 @@ public class SmartReview implements Serializable {
 	/**
 	 * 评论人
 	 */
-	private String username;
+	private String reviewUsername;
 	
 	/**
 	 * 评论时间
 	 */
 	@JSONField (format="yyyy-MM-dd HH:mm:ss")
 	private Date reviewTime;
+	
+	/**
+	 * 回复人
+	 */
+	private String replyUsername;
+	
+	/**
+	 * 回复时间
+	 */
+	@JSONField (format="yyyy-MM-dd HH:mm:ss")
+	private Date replyTime;
+	
+	/**
+	 * 回复内容
+	 */
+	private String replyContent;
 
 	public long getId() {
 		return id;
@@ -93,14 +105,6 @@ public class SmartReview implements Serializable {
 		this.score = score;
 	}
 
-	public long getReplyId() {
-		return replyId;
-	}
-
-	public void setReplyId(long replyId) {
-		this.replyId = replyId;
-	}
-
 	public long getUserId() {
 		return userId;
 	}
@@ -109,12 +113,28 @@ public class SmartReview implements Serializable {
 		this.userId = userId;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getReviewUsername() {
+		return reviewUsername;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setReviewUsername(String reviewUsername) {
+		this.reviewUsername = reviewUsername;
+	}
+
+	public String getReplyUsername() {
+		return replyUsername;
+	}
+
+	public void setReplyUsername(String replyUsername) {
+		this.replyUsername = replyUsername;
+	}
+
+	public Date getReplyTime() {
+		return replyTime;
+	}
+
+	public void setReplyTime(Date replyTime) {
+		this.replyTime = replyTime;
 	}
 
 	public Date getReviewTime() {
@@ -123,6 +143,14 @@ public class SmartReview implements Serializable {
 
 	public void setReviewTime(Date reviewTime) {
 		this.reviewTime = reviewTime;
+	}
+
+	public String getReplyContent() {
+		return replyContent;
+	}
+
+	public void setReplyContent(String replyContent) {
+		this.replyContent = replyContent;
 	}
 	
 	

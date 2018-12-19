@@ -64,4 +64,9 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 		return productCategoryRepository.findByStatus(CategoryStatus.ENABLE.value());
 	}
 
+	@Override
+	public List<SmartProductCategory> listParent() {
+		return productCategoryRepository.findByParentAndStatus(0, CategoryStatus.ENABLE.value());
+	}
+
 }

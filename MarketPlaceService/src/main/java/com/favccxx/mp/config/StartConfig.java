@@ -41,9 +41,11 @@ public class StartConfig implements ApplicationRunner {
 			club.setShopName("易商城");
 			club.setCharger("陈先生");
 			club.setChargeTel("1871xxxxxxx");
+			club.setStatus("200");
 			club.setDescription("<p><strong>易商城</strong>是陈先生基于Panjiachen的VUE-ELEMENT-ADMIN开发的一套简易WEB商城项目。前端基于VUE2+Element，支持国际化，动态路由和权限验证，后台采用SpringBoot微服务+Shiro进行身份认证与鉴权，同时又集成了Swagger方便进行接口测试。</p>");
 			club.setCreateTime(new Date());
 			club.setCreateUserName("admin");
+			club.setUpdateTime(new Date());
 			clubRepository.save(club);
 		}
 	}

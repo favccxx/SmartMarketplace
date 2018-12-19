@@ -14,5 +14,13 @@ public interface ProductCategoryRepository extends JpaRepository<SmartProductCat
 	 * @return
 	 */
 	List<SmartProductCategory> findByStatus(int status);
+	
+	/**
+	 * 根据父类别Id和状态查询类别列表
+	 * @param parentId
+	 * @param status
+	 * @return
+	 */
+	List<SmartProductCategory> findByParentAndStatus(long parentId, int status);
 
 }

@@ -52,10 +52,10 @@ public class ReviewServiceImpl implements ReviewService {
 			matcher.withMatcher("productId", GenericPropertyMatchers.exact());
 		}
 		
-		if(StringUtils.isBlank(review.getUsername())) {
-			matcher.getIgnoredPaths().add("username");
+		if(StringUtils.isBlank(review.getReviewUsername())) {
+			matcher.getIgnoredPaths().add("reviewUsername");
 		}else {
-			matcher.withMatcher("username", GenericPropertyMatchers.exact());
+			matcher.withMatcher("reviewUsername", GenericPropertyMatchers.exact());
 		}
 
 		Example<SmartReview> example = Example.of(review, matcher);

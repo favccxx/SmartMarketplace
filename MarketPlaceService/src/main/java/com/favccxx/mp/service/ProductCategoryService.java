@@ -41,4 +41,10 @@ public interface ProductCategoryService {
 	 * @return
 	 */
 	List<SmartProductCategory> listNormal();
+	
+	/**
+	 * 查询所有的父类别列表
+	 * @return
+	 */
+	List<SmartProductCategory> listParent();
 }

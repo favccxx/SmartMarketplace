@@ -80,6 +80,14 @@ public class ProductCategoryController {
 
 		return RestResult.sucess(pageData);
 	}
+	
+	@GetMapping("/listParent")
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "操作成功", response = SmartProductCategory.class) })
+	@ApiOperation(httpMethod = "GET", value = "查询所有正常的父类别信息")
+	public RestResult<List<SmartProductCategory>> listParent() {
+		List<SmartProductCategory> list = categoryService.listParent();
+		return RestResult.sucess(list);
+	}
 
 	@GetMapping("/listNomal")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "操作成功", response = SmartProductCategory.class) })
